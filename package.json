@@ -1,0 +1,20 @@
+{
+  "name": "notionize",
+  "version": "1.0.0",
+  "description": "A chrome extension to easily and quickly add YouTube videos, articles, comments, or other online documents to a Notion database",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sauhardar/notionize.git"
+  },
+  "author": "Sauharda Rajbhandari",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sauhardar/notionize/issues"
+  },
+  "homepage": "https://github.com/sauhardar/notionize#readme",
+  "devDependencies": {
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4"
+  }
+}

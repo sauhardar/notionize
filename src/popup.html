@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="App.css">
+</head>
+
+<body>
+  <script src="popup.js"></script>
+  <div class="container">
+    <h1>Notionize YouTube Videos</h1>
+    <div class="data-container">
+      <form>
+        <label class="data-label" for="video-title">Video Name: </label>
+        <input class="data" name="video-title" value="" placeholder="Video Title" type="text" id="video-title">
+      </form>
+    </div>
+    <div class="data-container">
+      <form>
+        <label class="data-label" for="channelName">Channel Name: </label>
+        <input class="data" name="channelName" value="" placeholder="Channel Name" type="text" id="channelName">
+      </form>
+    </div>
+    <div class="data-container">
+      <p class="data-label">Link: </p>
+      <p id="video-url" class="data" />
+    </div>
+    <div class="data-container">
+      <p class="data-label">Date: </p>
+      <p id="date" class="data" />
+    </div>
+  </div>
+</body>
+
+</html>

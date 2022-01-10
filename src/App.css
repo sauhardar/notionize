@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  min-width: 400px;
+  min-height: 300px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  flex-direction: column;
+}
+
+form,
+.data-container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 5px;
+  width: 100%;
+}
+
+form,
+.data-label {
+  flex: 2;
+  font-weight: 800;
+}
+
+.data {
+  flex: 8;
+}
+
+html,
+body {
+  padding: 10px;
+}
