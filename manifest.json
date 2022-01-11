@@ -1,6 +1,6 @@
 {
   "name": "Notionize",
-  "description": "A tool to easily and quickly add YouTube videos, articles, comments, or other online documents to a Notion database",
+  "description": "A Google Chrome extension that makes adding a memorable YouTube video to your Notion database quick and effortless.",
   "author": "Sauharda Rajbhandari",
   "version": "1.0",
   "manifest_version": 2,
@@ -27,7 +27,8 @@
   },
   "permissions": [
     "activeTab",
-    "tabs"
+    "tabs",
+    "<all_urls>"
   ],
   "content_scripts": [
     {
@@ -39,5 +40,6 @@
       ],
       "run_at": "document_end"
     }
-  ]
+  ],
+  "content_security_policy": "script-src 'self' https://unpkg.com/axios/dist/axios.min.js; object-src 'self'"
 }
