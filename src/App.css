@@ -1,15 +1,31 @@
 .container {
   display: flex;
   min-width: 500px;
-  min-height: 400px;
+  height: 400px;
   justify-content: space-between;
   align-items: center;
-  border-radius: 30px;
   flex-direction: column;
+  overflow-y: scroll;
+  box-sizing: content-box;
+}
+
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
 }
 
 .data-group {
   width: 100%;
+}
+
+button {
+  margin: 1rem 0;
+  background-color: #e4e7eb;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #ffffff;
 }
 
 form,
@@ -56,6 +72,7 @@ button {
 
 .tags-container-container {
   margin: 1.5rem 0;
+  overflow: visible;
 }
 
 #tags-container {
@@ -65,6 +82,7 @@ button {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+  overflow: visible;
 }
 
 .tag-option {
@@ -80,14 +98,11 @@ button {
 .tag-option:hover {
   display: inline;
   background-color: bisque !important;
-  border-color: cornflowerblue;
-  border-style: solid;
-  border-width: 1px;
   cursor: pointer;
   filter: brightness(1);
   color: #252f3f;
 
-  transform: scale(1.05);
+  transform: scale(1.15);
 }
 
 .selected-tag {

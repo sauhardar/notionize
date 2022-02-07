@@ -67,9 +67,27 @@ function addNewTags(e) {
   }
 }
 
+async function sendQuote() {
+  const quote = document.getElementById('quote-title').value;
+  const author = document.getElementById('quote-author').value;
+  const context = document.getElementById('quote-context').value;
+
+  axios.post('https://notionize.sauhardarajbhan.repl.co/quote', {
+    quote,
+    author,
+    context,
+    date: toLocalISO(new Date()),
+  });
+
+  document.getElementById('quote-title').value = '';
+  document.getElementById('quote-author').value = '';
+  document.getElementById('quote-context').value = '';
+}
+
 async function sendVideo() {
   const by = document.getElementById('channelName').value;
   const tags = Array.from(document.getElementsByClassName('selected-tag')).map((tag) => ({ name: tag.innerText }));
+  videoTitle = videoTitle.replace(' - YouTube', '');
 
   axios.post('https://notionize.sauhardarajbhan.repl.co/video', {
     title: videoTitle,
@@ -84,7 +102,8 @@ async function sendVideo() {
 
 window.onload = () => {
   getTags();
-  document.getElementById('save-btn').addEventListener('click', sendVideo);
+  document.getElementById('save-video-btn').addEventListener('click', sendVideo);
+  document.getElementById('save-quote-btn').addEventListener('click', sendQuote);
   document.getElementById('new-tags-input').addEventListener('keyup', addNewTags);
 
   chrome.runtime.onMessage.addListener((message) => {

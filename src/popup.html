@@ -7,7 +7,24 @@
 
 <body>
   <div class="container">
-    <h1>Notionize YouTube Videos</h1>
+    <h1>Notionize</h1>
+    <h2>Quotes</h2>
+    <div class="data-container quote-container">
+      <label class="data-label" for="quote-title">Quote:</label>
+      <input class="data" name="quote-title" value="" placeholder="ex. There comes a time..." type="text"
+        id="quote-title">
+    </div>
+    <div class="data-container">
+      <label class="data-label" for="quote-author">Who:</label>
+      <input class="data" name="quote-author" value="" placeholder="ex. Charles Dickens" type="text" id="quote-author">
+    </div>
+    <div class="data-container">
+      <label class="data-label" for="quote-context">Context:</label>
+      <input class="data" name="quote-context" value="" placeholder="ex. Reading NYTimes..." type="text"
+        id="quote-context">
+    </div>
+    <button id="save-quote-btn">Save Quote</button>
+    <h2>YouTube Videos</h2>
     <div class="data-group">
       <div class="data-container">
         <label class="data-label" for="video-title">Video Name: </label>
@@ -26,10 +43,9 @@
         <input class="data" name="new-tags" value="" placeholder="ex. Music, Guitar" type="text" id="new-tags-input">
       </div>
     </div>
-    <button id="save-btn">Save</button>
-  </div>
-  <script src="popup.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <button id="save-video-btn">Save Video</button>
+    <script src="popup.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
 
 </html>
